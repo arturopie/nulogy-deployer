@@ -18,23 +18,24 @@ Get the benefits of serverless architecture without its drawbacks.
 
   ```
   module "painless_infra" {
-    source "/painless_infra"
+    source = "/painless-infra"
 
     app_image = "<Docker Hub app to your instance>"
   }
 
   ```
 
-1. Run the following command
+1. Run the following commands
 
   ``` bash
-  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless_infra
+  docker run --rm arturop/painless-infra init.sh
+  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless-infra
   ```
 
 1. Get public IP of your app
 
   ```
-  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless_infra ./get_public_ip.sh
+  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless-infra get_public_ip.sh
   ```
 
 1. Open your browser and navigate to the printed public IP
