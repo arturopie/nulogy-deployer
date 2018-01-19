@@ -28,8 +28,8 @@ Get the benefits of serverless architecture without its drawbacks.
 1. Run the following commands
 
   ``` bash
-  docker run --rm arturop/painless-infra init.sh
-  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless-infra
+  docker run --rm arturop/painless-infra init_infra
+  docker run -it --rm --volume ~/.aws/:/root/.aws --volume "$(pwd)":/app arturop/painless-infra deploy
   ```
 
 1. Get public IP of your app

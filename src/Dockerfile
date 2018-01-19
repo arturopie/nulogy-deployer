@@ -24,4 +24,4 @@ COPY . /painless-infra
 
 RUN cp -rs /painless-infra/utils/*  /usr/local/bin/
 
-WORKDIR /painless-infra
+WORKDIR /app
