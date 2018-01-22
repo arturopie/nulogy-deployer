@@ -25,7 +25,9 @@ Get the benefits of serverless architecture without its drawbacks.
   module "painless_infra" {
     source = "/painless-infra"
 
+    environment_name = "<A Name used for tagging resources>"
     app_image = "<Docker Hub app to your instance>"
+    subdomain = "<Subdomain>"
   }
 
   ```
@@ -40,7 +42,7 @@ Get the benefits of serverless architecture without its drawbacks.
 1. Get public IP of your app
 
   ```
-  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless-infra get_public_ip.sh
+  docker run -it --rm -v ~/.aws/:/root/.aws arturop/painless-infra get_domain
   ```
 
-1. Open your browser and navigate to the printed public IP
+1. Open your browser and navigate to the printed domain
