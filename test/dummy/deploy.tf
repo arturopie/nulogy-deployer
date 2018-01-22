@@ -5,6 +5,7 @@ provider "aws" {
 
 module "painless_infra" {
   source = "/painless-infra"
+
   environment_name = "painless-infra-dummy-app"
   app_image = "arturop/painless-infra-dummy-app:latest"
   subdomain = "hackday-demo"

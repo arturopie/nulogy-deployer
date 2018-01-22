@@ -7,8 +7,6 @@ Get the benefits of serverless architecture without its drawbacks.
 * Docker
 * An AWS account
 * Your AWS credentials in ~/.aws/credentials. See [instructions](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html)
-* Basic knowledge of Docker
-* Basic knowledge of Terraform
 
 ## Basic Usage
 
@@ -30,6 +28,9 @@ Get the benefits of serverless architecture without its drawbacks.
     subdomain = "<Subdomain>"
   }
 
+  output "domain_name" {
+    value = "${module.painless_infra.domain_name}"
+  }
   ```
 
 1. Run the following commands
