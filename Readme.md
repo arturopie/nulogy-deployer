@@ -17,6 +17,11 @@ Get the benefits of serverless architecture without its drawbacks.
 1. Create the following terraform file in your project. Name it `deploy.tf`
 
   ```
+  provider "aws" {
+    region = "us-east-1"
+    profile = "<AWS credentials you want to use. See ~/.aws/credentials>"
+  }
+
   module "painless_infra" {
     source = "/painless-infra"
 
